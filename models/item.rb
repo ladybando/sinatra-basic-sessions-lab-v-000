@@ -1,12 +1,10 @@
 class Item
-  attr_accessor :name, :price
+  attr_accessor :name
 
   @@all = []
 
   def initialize(args)
     @name = args[:name]
-    @power = args[:price]
-    @bio = args[:bio]
     @@all << self
   end
 
