@@ -7,13 +7,11 @@ class App < Sinatra::Base
   end
 
   get '/' do
+    @session = session
     erb :index
   end
   
- post '/checkout' do
+  post '/checkout' do
 
   end
-  get '/hey' do 
-    @session = session
-  end
-  end
+end
