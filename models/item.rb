@@ -1,6 +1,16 @@
-class App < Sinatra::Base
+class Item
+  attr_accessor :name, :power, :bio
 
-    set :views, Proc.new { File.join(root, "../views/") }
+  @@all = []
 
+  def initialize(args)
+    @name = args[:name]
+    @power = args[:power]
+    @bio = args[:bio]
+    @@all << self
+  end
 
+  def self.all
+    @@all
+  end
 end
